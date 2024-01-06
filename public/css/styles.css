@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+:root {
+    --flip-speed: 0.5s;
+}
+
 body {
     height: 100vh;
     background-image: url("/src/assets/img/fancy\ restaurant.jpg");
@@ -66,9 +70,10 @@ p {
 
 #heads {
     animation: rotate-heads;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
+    animation-duration: var(--flip-speed);
+    animation-iteration-count: 4;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes rotate-heads {
@@ -86,9 +91,10 @@ p {
 
 #tails {
     animation: rotate-tails;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
+    animation-duration: var(--flip-speed);
+    animation-iteration-count: 4;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes rotate-tails {
