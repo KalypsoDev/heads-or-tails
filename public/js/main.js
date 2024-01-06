@@ -4,14 +4,17 @@ const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
 
 function flipCoin() {
-    const coinSides = ["heads", "tails"];
-    const randomSide = Math.floor(Math.random()*2);
-    const outcome = coinSides[randomSide];
-    setTimeout(() => {
-        updateScoreboard(outcome)
-    }, 2000);
     const coinContainer = document.getElementById('coin-container');
-    coinContainer.classList.add(`flip-to-${outcome}`);
+    coinContainer.classList.remove('flip-to-heads', 'flip-to-tails');
+    setTimeout(() => {
+        const coinSides = ["heads", "tails"];
+        const randomSide = Math.floor(Math.random()*2);
+        const outcome = coinSides[randomSide];
+        setTimeout(() => {
+            updateScoreboard(outcome)
+        }, 2000);
+        coinContainer.classList.add(`flip-to-${outcome}`);
+    }, 100)
 }
 
 const scoreBoard = document.getElementById('scoreboard-container');
