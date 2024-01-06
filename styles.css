@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url("./src/assets/img/fancy\ restaurant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+}
+
+h1 {
+    color: white
+}
+
+main {
+    background: rgba(200, 200, 200, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.215);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+main p {
+    max-width: 300px;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#instructions-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#coin-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.coin {
+    width: 120px;
+    padding: 10px;
+}
+
+#tails {
+    display: none;
+}
+
+#scoreboard-container {
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+#scoreboard-container.hidden {
+    display: none;
+}
+
+#actions-container {
+    display: flex;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    font-weight: bold;
+}
+
+footer {
+    color: white;
+}
