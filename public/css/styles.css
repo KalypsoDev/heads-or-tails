@@ -52,15 +52,56 @@ p {
 #coin-container {
     display: flex;
     flex-direction: column;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    position: relative;
 }
 
 #coin-container img {
-    width: 120px;
-    padding: 10px;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#heads {
+    animation: rotate-heads;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-heads {
+    0% {
+        transform:rotate3d(0, 1, 0, 0deg);
+    }
+    50% {
+        transform:rotate3d(0, 1, 0, 180deg);
+    }
+
+    100% {
+        transform:rotate3d(0, 1, 0, 360deg);
+    }
 }
 
 #tails {
-    display: none;
+    animation: rotate-tails;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-tails {
+    0% {
+        transform:rotate3d(0, 1, 0, 180deg);
+    }
+    50% {
+        transform:rotate3d(0, 1, 0, 360deg);
+    }
+
+    100% {
+        transform:rotate3d(0, 1, 0, 180deg);
+    }
 }
 
 #scoreboard-container {
