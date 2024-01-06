@@ -10,6 +10,8 @@ function flipCoin() {
     setTimeout(() => {
         updateScoreboard(outcome)
     }, 2000);
+    const coinContainer = document.getElementById('coin-container');
+    coinContainer.classList.add(`flip-to-${outcome}`);
 }
 
 const scoreBoard = document.getElementById('scoreboard-container');
