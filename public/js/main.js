@@ -3,7 +3,9 @@ const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
 
 function flipCoin() {
-    console.log('The coin is flipping');
+    const coinSides = ["heads", "tails"];
+    const randomSide = Math.floor(Math.random()*2);
+    const outcome = coinSides[randomSide];
 }
 
 const resetButton = document.getElementById('reset');
