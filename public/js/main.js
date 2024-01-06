@@ -1,42 +1,9 @@
-import { state } from './state.js';
+import { flipCoin, resetCoin } from './coin.js';
+import { resetScoreboard } from './scoreBoard.js';
 
 const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
 
-const coinContainer = document.getElementById('coin-container');
-
-function flipCoin() {
-    coinContainer.classList.remove('flip-to-heads', 'flip-to-tails');
-    setTimeout(() => {
-        const coinSides = ["heads", "tails"];
-        const randomSide = Math.floor(Math.random()*2);
-        const outcome = coinSides[randomSide];
-        setTimeout(() => {
-            updateScoreboard(outcome)
-        }, 2000);
-        coinContainer.classList.add(`flip-to-${outcome}`);
-    }, 100)
-}
-
-const scoreBoard = document.getElementById('scoreboard-container');
-
-function updateScoreboard(outcome) {
-    state[outcome]++;
-    const outcomeMessage = document.getElementById('outcome');
-    outcomeMessage.innerHTML = `You've got ${outcome}!`;
-    scoreBoard.classList.remove('hidden');
-    const headsUpdate = document.getElementById('heads-count');
-    headsUpdate.innerHTML = state.heads;
-    const tailsUpdate = document.getElementById('tails-count');
-    tailsUpdate.innerHTML = state.tails;
-}
-
 const resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', resetGame);
-
-function resetGame() {
-    state.heads = 0;
-    state.tails = 0;
-    scoreBoard.classList.add('hidden');
-    coinContainer.classList.remove('flip-to-heads', 'flip-to-tails');
-}
+resetButton.addEventListener('click', resetCoin);
+resetButton.addEventListener('click', resetScoreboard);
