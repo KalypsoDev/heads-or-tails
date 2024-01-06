@@ -66,6 +66,9 @@ p {
     width: 100%;
     position: absolute;
     backface-visibility: hidden;
+    display: block;
+    top: 0;
+    left: 0;
 }
 
 #heads {
@@ -107,6 +110,7 @@ p {
     animation-iteration-count: 4;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    transform:rotate3d(0, 1, 0, 180deg);
 }
 
 @keyframes rotate-tails {
