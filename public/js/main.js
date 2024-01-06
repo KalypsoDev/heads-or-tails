@@ -10,9 +10,10 @@ function flipCoin() {
     updateScoreboard(outcome);
 }
 
+const scoreBoard = document.getElementById('scoreboard-container');
+
 function updateScoreboard(outcome) {
     state[outcome]++;
-    const scoreBoard = document.getElementById('scoreboard-container');
     const outcomeMessage = document.getElementById('outcome');
     outcomeMessage.innerHTML = `You've got ${outcome}!`;
     scoreBoard.classList.remove('hidden');
@@ -26,5 +27,7 @@ const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', resetGame);
 
 function resetGame() {
-    console.log('The game has started again');
+    state.heads = 0;
+    state.tails = 0;
+    scoreBoard.classList.add('hidden');
 }
