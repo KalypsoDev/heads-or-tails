@@ -7,7 +7,9 @@ function flipCoin() {
     const coinSides = ["heads", "tails"];
     const randomSide = Math.floor(Math.random()*2);
     const outcome = coinSides[randomSide];
-    updateScoreboard(outcome);
+    setTimeout(() => {
+        updateScoreboard(outcome)
+    }, 2000);
 }
 
 const scoreBoard = document.getElementById('scoreboard-container');
