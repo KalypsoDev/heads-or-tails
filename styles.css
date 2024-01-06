@@ -54,7 +54,7 @@ p {
     flex-direction: column;
 }
 
-.coin {
+#coin-container img {
     width: 120px;
     padding: 10px;
 }
