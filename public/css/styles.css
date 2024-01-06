@@ -69,11 +69,24 @@ p {
 }
 
 #heads {
-    animation: rotate-heads;
     animation-duration: var(--flip-speed);
     animation-iteration-count: 4;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+}
+
+#coin-container.flip-to-heads #heads {
+    animation-name: rotate-heads;
+}
+#coin-container.flip-to-heads #tails {
+    animation-name: rotate-tails;
+}
+
+#coin-container.flip-to-tails #heads {
+    animation-name: rotate-tails;
+}
+#coin-container.flip-to-tails #tails {
+    animation-name: rotate-heads;
 }
 
 @keyframes rotate-heads {
@@ -90,7 +103,6 @@ p {
 }
 
 #tails {
-    animation: rotate-tails;
     animation-duration: var(--flip-speed);
     animation-iteration-count: 4;
     animation-timing-function: linear;
