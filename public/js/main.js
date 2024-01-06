@@ -1,3 +1,4 @@
+import { state } from './state.js';
 
 const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
