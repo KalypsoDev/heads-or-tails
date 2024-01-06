@@ -24,9 +24,9 @@ function updateScoreboard(outcome) {
     const outcomeMessage = document.getElementById('outcome');
     outcomeMessage.innerHTML = `You've got ${outcome}!`;
     scoreBoard.classList.remove('hidden');
-    const headsUpdate = document.getElementById('heads_count');
+    const headsUpdate = document.getElementById('heads-count');
     headsUpdate.innerHTML = state.heads;
-    const tailsUpdate = document.getElementById('tails_count');
+    const tailsUpdate = document.getElementById('tails-count');
     tailsUpdate.innerHTML = state.tails;
 }
 
