@@ -3,8 +3,9 @@ import { state } from './state.js';
 const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
 
+const coinContainer = document.getElementById('coin-container');
+
 function flipCoin() {
-    const coinContainer = document.getElementById('coin-container');
     coinContainer.classList.remove('flip-to-heads', 'flip-to-tails');
     setTimeout(() => {
         const coinSides = ["heads", "tails"];
@@ -37,4 +38,5 @@ function resetGame() {
     state.heads = 0;
     state.tails = 0;
     scoreBoard.classList.add('hidden');
+    coinContainer.classList.remove('flip-to-heads', 'flip-to-tails');
 }
