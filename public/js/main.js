@@ -1,3 +1,4 @@
+
 const flipButton = document.getElementById('flip');
 flipButton.addEventListener('click', flipCoin);
 
@@ -11,4 +12,5 @@ resetButton.addEventListener('click', resetGame);
 function resetGame() {
     console.log('The game has started again');
 }
+
 
